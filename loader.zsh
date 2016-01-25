@@ -264,7 +264,7 @@ function loader_reset {
 function loader_finish {
 	LOADER_ACTIVE=false
 
-	unset \
+	unset -f \
 		load \
 		include \
 		call \
@@ -276,7 +276,9 @@ function loader_finish {
 		loader_getabspath_ \
 		loader_load \
 		loader_load_ \
-		loader_reset \
+		loader_reset
+
+	unset \
 		LOADER_CS \
 		LOADER_CS_I \
 		LOADER_FLAGS \
